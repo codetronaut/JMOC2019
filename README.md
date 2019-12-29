@@ -12,9 +12,9 @@ Task here is to code a bash/python script which can support the following tasks:
 Script should take serveral input from the user like directory to be shared, username and password for server login etc.
 ### 2) Updating the system packages.
 Scipt should be able to detect the distro on which it is running and should be able to run the appropriate commands to update packages. 
-### 3) Running in system monitoring mode
+### 3) Running in system monitoring mode.
 Script should support running in a monitoring mode where it can keep a check on system health by monitoring system wide resource usage, hardware health, Network usage etc.
-### 4) Mounting and Unmounting plugged in devices
+### 4) Mounting and Unmounting plugged in devices.
 Script should be able to check for plugged in disk devices (USB devices and drive partitions) and mounting/unmounting.
 
 ## Instructions
@@ -23,5 +23,6 @@ Script should be able to check for plugged in disk devices (USB devices and driv
 3) Corner cases should be handled accordingly for each task.
 4) Do not copy code directly from other PRs or stackoverflow.
 5) For any query, Open an issue and place your query there. 
+6) Script should support both Debian and Fedora based distributions.
 
 
