@@ -42,9 +42,9 @@ while [ "$1" != "" ]; do
             exit
             ;;
         -1) samba_config exit ;; 
-			  -2) Update exit ;; 
-		    -3)	monitoring exit ;; 
-		    -4) mount_unmount exit ;; 
+	-2) Update exit ;; 
+	-3) monitoring exit ;; 
+	-4) mount_unmount exit ;; 
 
         *)
             echo "ERROR: unknown parameter \"$PARAM\""
