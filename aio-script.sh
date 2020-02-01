@@ -5,7 +5,6 @@ function help()
     echo "All-in-one-script"
     echo "NAME
        AIO-script - All In One Script
-
 SYNOPSIS
        bash [aio-script] [options]
 OPTIONS 
@@ -32,7 +31,9 @@ function mount_unmount()
 {
 	echo "Mounting and unmounting..."
 }
-
+if [ "$1" == "" ] 
+    then echo "Enter parameters. use $ bash [script] --help."
+else 
 while [ "$1" != "" ]; do
     PARAM=`echo $1 | awk -F= '{print $1}'`
     VALUE=`echo $1 | awk -F= '{print $2}'`
@@ -54,4 +55,7 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
+
+fi
+
 
