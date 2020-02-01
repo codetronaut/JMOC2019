@@ -23,6 +23,14 @@ function samba_config()
 
 function Update(){
 	echo "Updating..."
+if [ -f /etc/os-release ];
+    then
+        sudo aptitude update && sudo apt upgrade -y
+elif [ -f /etc/redhat-release ];
+    then
+        sudo yum update && sudo yum upgrade -y
+    
+    fi
 }
 function monitoring(){
 	echo "Monitoring..."
