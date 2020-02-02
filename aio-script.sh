@@ -37,8 +37,8 @@ function monitoring(){
 	echo "Monitoring..."
 if [ -f /etc/os-release ];
     then
-        not_installed=$(dpkg -s htop 2>&1 | grep "install or installed")
-        if [ -n "$not_installed" ]; 
+        not_installed=$(dpkg -s htop 2>&1 | grep "install ok installed")
+        if [ -n $not_installed ]; 
         then 
         sudo apt install htop
 	htop
@@ -48,7 +48,7 @@ if [ -f /etc/os-release ];
 elif [ -f /etc/redhat-release ];
     then
         not_installed=$(yum list installed 2>&1 | grep "htop")
-        if [ -n "$not_installed" ]; 
+        if [ -n $not_installed ]; 
         then
         sudo yum install htop
 	htop
