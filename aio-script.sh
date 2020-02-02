@@ -32,9 +32,33 @@ elif [ -f /etc/redhat-release ];
     
  fi
 }
+
 function monitoring(){
 	echo "Monitoring..."
+if [ -f /etc/os-release ];
+    then
+        not_installed=$(dpkg -s htop 2>&1 | grep "install ok installed")
+        if [ -n $not_installed ]; 
+        then 
+        sudo apt install htop
+	htop
+        else
+        htop
+        fi
+elif [ -f /etc/redhat-release ];
+    then
+        not_installed=$(yum list installed 2>&1 | grep "htop")
+        if [ -n $not_installed ]; 
+        then
+        sudo yum install htop
+	htop
+        else 
+        htop
+        fi
+   
+fi
 }
+
 function mount_unmount()
 {
 	echo "Mounting and unmounting..."
