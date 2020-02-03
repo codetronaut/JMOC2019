@@ -10,8 +10,7 @@ SYNOPSIS
 OPTIONS 
  		-1      Setting up samba server     
 		-2	Updates the system packages	
-		-3	Running in system monitoring mode	
-		-4	Mounting and Unmounting plugged in devices 
+		-3	Running in system monitoring mode	 
  "
 
 }
@@ -110,10 +109,10 @@ elif [ -f /etc/redhat-release ];
 fi
 }
 
-function mount_unmount()
-{
-	echo "Mounting and unmounting..."
-}
+# function mount_unmount()
+# {
+# 	echo "Mounting and unmounting..."
+# }
 
 
 if [ "$1" == "" ] 
@@ -130,7 +129,7 @@ if [ "$1" != "" ]; then
         -1) samba_config $2 $3 ;exit ;; 
 	-2) Update exit ;; 
 	-3) monitoring exit ;; 
-	-4) mount_unmount exit ;; 
+# 	-4) mount_unmount exit ;; 
 
         *)
             echo "ERROR: unknown parameter \"$PARAM\""
